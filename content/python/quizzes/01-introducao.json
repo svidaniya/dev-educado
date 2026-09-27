@@ -1,0 +1,10 @@
+{
+  "title": "Quiz - Introdução ao Python",
+  "questions": [
+    {"question":"Para que serve a função print?","options":["Ler um arquivo","Mostrar uma mensagem na tela","Criar uma variável","Repetir um código"],"answer":1},
+    {"question":"O que o código print(\"Oi\") exibe?","options":["Uma variável","Oi","Um erro sempre","As aspas"],"answer":1},
+    {"question":"Qual símbolo inicia um comentário em Python?","options":["//","#","--","/*"],"answer":1},
+    {"question":"Qual é uma boa razão para aprender a programar?","options":["Dar instruções para resolver tarefas","Evitar usar computadores","Substituir todo texto","Nunca testar programas"],"answer":0},
+    {"question":"O que acontece com um comentário quando o programa executa?","options":["É mostrado na tela","É ignorado pelo Python","Vira uma variável","Repete o programa"],"answer":1}
+  ]
+}

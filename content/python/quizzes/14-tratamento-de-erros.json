@@ -1,0 +1,10 @@
+{
+  "title": "Quiz - Tratamento de erros",
+  "questions": [
+    {"question":"Qual bloco contém um código que pode falhar?","options":["try","except","while","for"],"answer":0},
+    {"question":"Qual erro pode ocorrer em int(\"abc\")?","options":["ValueError","NameError","FileError","LoopError"],"answer":0},
+    {"question":"Quando except ValueError executa?","options":["Quando ocorre essa conversão inválida","Sempre antes de try","Quando arquivo existe","Ao criar lista"],"answer":0},
+    {"question":"Qual recurso encerra o while após uma entrada válida?","options":["break","continue","pass","import"],"answer":0},
+    {"question":"Qual é o objetivo de tratar entrada inválida?","options":["Orientar e manter o programa controlado","Esconder todos os erros","Nunca usar input","Apagar dados"],"answer":0}
+  ]
+}

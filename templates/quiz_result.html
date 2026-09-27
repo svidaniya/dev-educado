@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}Resultado - DevEducado{% endblock %}
+{% block content %}
+<section class="max-w-2xl mx-auto bg-white border border-slate-200 rounded-xl p-6 text-center">
+    <h1 class="text-2xl font-bold mb-4">Resultado</h1>
+    <p class="text-lg">Voce acertou <strong>{{ tentativa.pontuacao }}</strong> de <strong>{{ tentativa.total }}</strong> questoes.</p>
+    <p class="text-xl font-semibold mt-2">Pontuacao: {{ porcentagem }}%</p>
+    {% if proxima_atividade %}
+        {% if proxima_atividade.tipo == "aula" %}
+            <a href="{{ url_for('detalhe_aula', identificador_curso=identificador_curso, identificador_aula=proxima_atividade.identificador) }}" class="inline-block mt-6 bg-slate-900 text-white px-4 py-2 rounded-md">Proxima atividade</a>
+        {% else %}
+            <a href="{{ url_for('pagina_quiz', identificador_curso=identificador_curso, identificador_quiz=proxima_atividade.identificador) }}" class="inline-block mt-6 bg-slate-900 text-white px-4 py-2 rounded-md">Proxima atividade</a>
+        {% endif %}
+    {% else %}
+        <a href="{{ url_for('detalhe_curso', identificador_curso=identificador_curso) }}" class="inline-block mt-6 bg-slate-900 text-white px-4 py-2 rounded-md">Voltar para o curso</a>
+    {% endif %}
+</section>
+{% endblock %}

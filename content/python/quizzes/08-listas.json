@@ -1,0 +1,10 @@
+{
+  "title": "Quiz - Listas",
+  "questions": [
+    {"question":"Qual sintaxe cria uma lista?","options":["(1, 2)","[1, 2]","{1, 2}","<1, 2>"],"answer":1},
+    {"question":"Qual é a posição do primeiro item?","options":["0","1","-1","Depende do texto"],"answer":0},
+    {"question":"Qual método acrescenta um item ao final?","options":["append","upper","items","write"],"answer":0},
+    {"question":"Como percorrer cada fruta de frutas?","options":["for fruta in frutas","if fruta in frutas","def frutas","import frutas"],"answer":0},
+    {"question":"Acessar uma posição inexistente em uma lista causa:","options":["Um erro","Uma nova lista","Texto vazio sempre","A posição zero"],"answer":0}
+  ]
+}

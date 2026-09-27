@@ -1,0 +1,10 @@
+{
+  "title": "Quiz - Strings",
+  "questions": [
+    {"question":"O que é uma string?","options":["Um texto","Um loop","Um arquivo","Um módulo"],"answer":0},
+    {"question":"O que frase.upper() produz?","options":["Versão em maiúsculas","Número de letras","Versão em minúsculas","Uma lista"],"answer":0},
+    {"question":"Para que serve len(texto)?","options":["Contar caracteres","Apagar texto","Ler arquivo","Criar função"],"answer":0},
+    {"question":"O que strip() remove?","options":["Espaços nas pontas","Todas as letras","Números","Aspas"],"answer":0},
+    {"question":"Qual expressão verifica se @ aparece em email?","options":["\"@\" in email","email == @","@.email","email.append(\"@\")"],"answer":0}
+  ]
+}

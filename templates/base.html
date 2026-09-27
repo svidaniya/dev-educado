@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}DevEducado{% endblock %}</title>
+    <link rel="icon" type="image/png" href="https://images.emojiterra.com/twitter/v14.0/1024px/1f913.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}">
+</head>
+<body class="bg-slate-100 text-slate-900 min-h-screen">
+    <header class="bg-slate-900 text-white">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between gap-4">
+            <a href="{{ url_for('pagina_inicial') }}" class="flex items-center gap-2 font-bold text-xl" aria-label="DevEducado - Página inicial">
+                <img class="h-7 w-7 shrink-0 object-contain" src="https://images.emojiterra.com/twitter/v14.0/1024px/1f913.png" alt="">
+                <span>DevEducado</span>
+            </a>
+            <nav class="flex items-center gap-3 text-sm">
+                <a href="{{ url_for('pagina_inicial') }}" class="hover:text-amber-300">Inicio</a>
+                <a href="{{ url_for('listar_cursos') }}" class="hover:text-amber-300">Cursos</a>
+                <a href="{{ url_for('ranking') }}" class="hover:text-amber-300">Ranking</a>
+                {% if usuario_atual %}
+                    <a href="{{ url_for('painel') }}" class="hover:text-amber-300">Dashboard</a>
+                    <a href="{{ url_for('perfil') }}" class="hover:text-amber-300">Perfil</a>
+                    <span class="text-slate-300">{{ usuario_atual.nome }}</span>
+                    <a href="{{ url_for('sair') }}" class="bg-amber-400 text-slate-900 px-3 py-1 rounded-md font-medium">Sair</a>
+                {% else %}
+                    <a href="{{ url_for('entrar') }}" class="hover:text-amber-300">Login</a>
+                    <a href="{{ url_for('cadastrar') }}" class="bg-amber-400 text-slate-900 px-3 py-1 rounded-md font-medium">Cadastro</a>
+                {% endif %}
+            </nav>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 py-8">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div class="mb-6 space-y-2">
+                    {% for category, message in messages %}
+                        <div class="rounded-md px-4 py-3 text-sm {% if category == 'success' %}bg-emerald-100 text-emerald-900{% elif category == 'warning' %}bg-amber-100 text-amber-900{% else %}bg-rose-100 text-rose-900{% endif %}">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>

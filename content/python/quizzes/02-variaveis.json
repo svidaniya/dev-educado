@@ -1,0 +1,10 @@
+{
+  "title": "Quiz - Variáveis e tipos de dados",
+  "questions": [
+    {"question":"O que nome = \"Ana\" faz?","options":["Compara nome com Ana","Guarda o texto Ana na variável nome","Imprime Ana","Apaga nome"],"answer":1},
+    {"question":"Qual valor é um inteiro?","options":["\"10\"","10","10.0","True"],"answer":1},
+    {"question":"Qual é um valor booleano válido?","options":["true","verdadeiro","TRUE","True"],"answer":3},
+    {"question":"Qual nome de variável é válido?","options":["idade atual","2idade","idade_atual","idade-atual"],"answer":2},
+    {"question":"Qual tipo costuma guardar números com casas decimais?","options":["str","bool","float","list"],"answer":2}
+  ]
+}

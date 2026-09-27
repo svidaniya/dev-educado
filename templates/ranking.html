@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block title %}Ranking - DevEducado{% endblock %}
+{% block content %}
+<section class="bg-white border border-slate-200 rounded-xl p-6">
+    <div class="flex flex-wrap items-end justify-between gap-4 mb-4">
+        <h1 class="text-2xl font-bold">Ranking</h1>
+        <form method="get" class="flex items-center gap-2">
+            <label for="curso" class="text-sm">Filtrar por curso</label>
+            <select id="curso" name="curso" class="border border-slate-300 rounded-md px-2 py-2 text-sm">
+                <option value="">Geral</option>
+                {% for curso in todos_cursos %}
+                    <option value="{{ curso.identificador }}" {% if identificador_curso_selecionado == curso.identificador %}selected{% endif %}>{{ curso.titulo }}</option>
+                {% endfor %}
+            </select>
+            <button class="bg-slate-900 text-white px-3 py-2 rounded-md text-sm">Aplicar</button>
+        </form>
+    </div>
+
+    <div class="overflow-hidden border border-slate-100 rounded-lg">
+        <table class="w-full text-sm">
+            <thead class="bg-slate-50">
+                <tr>
+                    <th class="text-left px-4 py-2">Posicao</th>
+                    <th class="text-left px-4 py-2">Aluno</th>
+                    <th class="text-left px-4 py-2">Pontos</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for linha_ranking in linhas_ranking %}
+                    <tr class="border-t border-slate-100">
+                        <td class="px-4 py-2">{{ loop.index }}</td>
+                        <td class="px-4 py-2">{{ linha_ranking.nome }}</td>
+                        <td class="px-4 py-2">{{ linha_ranking.pontos }}</td>
+                    </tr>
+                {% else %}
+                    <tr>
+                        <td colspan="3" class="px-4 py-4 text-slate-600">Sem tentativas de quiz para mostrar.</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</section>
+{% endblock %}

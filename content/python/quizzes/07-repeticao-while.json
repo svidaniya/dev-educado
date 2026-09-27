@@ -1,0 +1,10 @@
+{
+  "title": "Quiz - Repetição com while",
+  "questions": [
+    {"question":"Enquanto uma condição é verdadeira, while:","options":["Repete seu bloco","Cria módulo","Fecha arquivo","Remove lista"],"answer":0},
+    {"question":"O que pode causar um loop infinito?","options":["Atualizar a condição","Nunca alterar a variável da condição","Usar print","Usar int"],"answer":1},
+    {"question":"Para que serve break em um loop?","options":["Encerrar o loop","Duplicar o loop","Criar uma tupla","Converter texto"],"answer":0},
+    {"question":"Qual situação combina com while?","options":["Pedir senha até acertar","Mostrar exatamente cinco números conhecidos","Criar dicionário","Importar math"],"answer":0},
+    {"question":"Se contador começa em 0 e aumenta até não ser menor que 3, quantas voltas ocorrem?","options":["2","3","4","0"],"answer":1}
+  ]
+}

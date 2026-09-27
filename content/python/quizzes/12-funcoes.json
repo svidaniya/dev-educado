@@ -1,0 +1,10 @@
+{
+  "title": "Quiz - Funções",
+  "questions": [
+    {"question":"Qual palavra inicia a definição de uma função?","options":["def","func","function","return"],"answer":0},
+    {"question":"Quando o código de uma função executa?","options":["Quando ela é chamada","Sempre ao ser definida","Só com input","Nunca"],"answer":0},
+    {"question":"Para que serve return?","options":["Devolver um resultado","Repetir o programa","Abrir arquivo","Adicionar lista"],"answer":0},
+    {"question":"Qual chamada executa mostrar()?","options":["mostrar","mostrar()","def mostrar","return mostrar"],"answer":1},
+    {"question":"Qual vantagem de uma função?","options":["Organizar e reutilizar uma tarefa","Proibir variáveis","Evitar testes","Substituir todos os loops"],"answer":0}
+  ]
+}

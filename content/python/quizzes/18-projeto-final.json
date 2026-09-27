@@ -1,0 +1,10 @@
+{
+  "title": "Quiz - Projeto final",
+  "questions": [
+    {"question":"Qual estrutura pode guardar as tarefas do projeto?","options":["Uma lista","Um comentário","Um módulo obrigatório","Uma única string"],"answer":0},
+    {"question":"Qual estrutura pode representar descrição e status de uma tarefa?","options":["Dicionário","Tupla vazia apenas","Float","Import"],"answer":0},
+    {"question":"Para que enumerate ajuda ao listar tarefas?","options":["Numerar os itens","Ler arquivos automaticamente","Tratar ValueError","Criar módulos"],"answer":0},
+    {"question":"Por que tratar a conversão do número da tarefa?","options":["A pessoa pode digitar algo inválido","Listas não usam números","Funções proíbem int","Arquivos exigem texto"],"answer":0},
+    {"question":"Qual é uma boa forma de construir o projeto?","options":["Criar e testar uma parte por vez","Escrever tudo sem executar","Começar por recursos avançados","Ignorar entradas inválidas"],"answer":0}
+  ]
+}

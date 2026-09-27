@@ -1,0 +1,10 @@
+{
+  "title": "Quiz - Condicionais",
+  "questions": [
+    {"question":"Para que serve if?","options":["Criar arquivo","Tomar uma decisão por condição","Importar módulo","Criar uma lista"],"answer":1},
+    {"question":"Qual operador compara igualdade?","options":["=","==","!=","=>"],"answer":1},
+    {"question":"Quando o bloco else executa?","options":["Quando o if é falso","Sempre antes do if","Só com listas","Nunca"],"answer":0},
+    {"question":"Qual palavra adiciona uma condição intermediária?","options":["elif","while","def","return"],"answer":0},
+    {"question":"Por que a indentação é importante em um if?","options":["Muda a cor","Indica o bloco de código","Cria texto","Converte números"],"answer":1}
+  ]
+}

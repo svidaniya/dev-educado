@@ -1,0 +1,10 @@
+{
+  "title": "Quiz - Dicionários",
+  "questions": [
+    {"question":"O que um dicionário relaciona?","options":["Chaves e valores","Apenas números","Arquivos e pastas","Funções e erros"],"answer":0},
+    {"question":"Como acessar o nome em aluno = {\"nome\": \"Lia\"}?","options":["aluno.nome","aluno[\"nome\"]","nome[aluno]","aluno(\"nome\")"],"answer":1},
+    {"question":"Como adicionar a chave nota?","options":["aluno.append(\"nota\")","aluno[\"nota\"] = 8","nota = aluno","aluno.add(8)"],"answer":1},
+    {"question":"Qual método ajuda a percorrer chave e valor?","options":["items","append","strip","sqrt"],"answer":0},
+    {"question":"Qual dado é adequado para um dicionário?","options":["Cadastro com nome e telefone","Uma única idade","Um comentário","Uma repetição"],"answer":0}
+  ]
+}

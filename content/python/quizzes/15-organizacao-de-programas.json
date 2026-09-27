@@ -1,0 +1,10 @@
+{
+  "title": "Quiz - Organização de programas",
+  "questions": [
+    {"question":"Qual prática deixa um programa mais legível?","options":["Separar tarefas em funções pequenas","Usar nomes sem sentido","Colocar tudo em uma linha","Evitar testes"],"answer":0},
+    {"question":"O que um bom nome de função deve indicar?","options":["A tarefa que ela realiza","A cor do editor","A idade do autor","O tamanho do arquivo"],"answer":0},
+    {"question":"Qual função costuma ser usada como ponto de início?","options":["main","input","range","open"],"answer":0},
+    {"question":"No exemplo, ler_nota tem qual responsabilidade?","options":["Ler uma nota","Calcular raiz","Salvar arquivo","Sorteiar dado"],"answer":0},
+    {"question":"Por que dividir leitura e cálculo?","options":["Facilita entender e testar cada parte","Impede usar variáveis","Elimina condições","Só funciona com arquivos"],"answer":0}
+  ]
+}

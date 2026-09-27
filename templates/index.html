@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block title %}Início - DevEducado{% endblock %}
+{% block content %}
+<section class="bg-white rounded-xl shadow-sm border border-slate-200 p-8 mb-8">
+    <h1 class="text-3xl font-bold mb-3">Aprenda programação no seu ritmo</h1>
+    <p class="text-slate-700 mb-6">Escolha um curso, pratique com calma e acompanhe seu progresso a cada aula.</p>
+    <div class="flex flex-wrap gap-3">
+        {% if usuario_atual %}
+            <a href="{{ url_for('painel') }}" class="bg-slate-900 text-white px-4 py-2 rounded-md">Ir para meu painel</a>
+        {% else %}
+            <a href="{{ url_for('cadastrar') }}" class="bg-slate-900 text-white px-4 py-2 rounded-md">Criar conta</a>
+            <a href="{{ url_for('entrar') }}" class="bg-white border border-slate-300 px-4 py-2 rounded-md">Já tenho conta</a>
+        {% endif %}
+    </div>
+</section>
+
+<section>
+    <h2 class="text-2xl font-bold mb-4">Cursos disponíveis</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {% for curso in cursos %}
+            <article class="bg-white rounded-xl shadow-sm border border-slate-200 p-5">
+                {% if curso.imagem %}
+                    <img src="{{ curso.imagem }}" alt="{{ curso.descricao_imagem or curso.titulo }}" class="w-full h-40 object-cover rounded-md mb-4">
+                {% endif %}
+                <h3 class="font-bold text-lg">{{ curso.titulo }}</h3>
+                <p class="text-sm text-slate-600 mt-2">{{ curso.descricao }}</p>
+                <ul class="text-sm mt-4 space-y-1 text-slate-700">
+                    <li>Linguagem: {{ curso.linguagem }}</li>
+                    <li>Nível: {{ curso.nivel }}</li>
+                    <li>Aulas: {{ curso.quantidade_aulas }}</li>
+                    <li>Alunos: {{ curso.quantidade_alunos }}</li>
+                </ul>
+                <a href="{{ url_for('detalhe_curso', identificador_curso=curso.identificador) }}" class="mt-4 inline-block bg-amber-400 text-slate-900 px-3 py-2 rounded-md font-medium">Ver curso</a>
+            </article>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

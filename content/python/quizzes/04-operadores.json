@@ -1,0 +1,10 @@
+{
+  "title": "Quiz - Operadores",
+  "questions": [
+    {"question":"Qual operador faz multiplicação?","options":["+","-","*","/"],"answer":2},
+    {"question":"Qual é o resultado de 10 % 3?","options":["3","1","0","10"],"answer":1},
+    {"question":"O que preço * quantidade costuma calcular?","options":["O total","Uma comparação","Um texto","Uma lista"],"answer":0},
+    {"question":"Qual operador junta os textos \"a\" e \"b\"?","options":["*","+","%","//"],"answer":1},
+    {"question":"Qual operação calcula uma média após somar as notas?","options":["Multiplicar por 100","Dividir pela quantidade de notas","Usar %","Transformar em texto"],"answer":1}
+  ]
+}

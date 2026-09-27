@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %}Perfil - DevEducado{% endblock %}
+{% block content %}
+<section class="max-w-3xl bg-white border border-slate-200 rounded-xl p-6">
+    <h1 class="text-2xl font-bold mb-4">Perfil</h1>
+    <p class="text-slate-700"><strong>Nome:</strong> {{ usuario_atual.nome }}</p>
+    <p class="text-slate-700"><strong>Email:</strong> {{ usuario_atual.email }}</p>
+
+    <div class="grid sm:grid-cols-3 gap-3 mt-6">
+        <article class="border border-slate-200 rounded-md p-4 text-center">
+            <p class="text-2xl font-bold">{{ quantidade_inscricoes }}</p>
+            <p class="text-sm text-slate-600">Cursos inscritos</p>
+        </article>
+        <article class="border border-slate-200 rounded-md p-4 text-center">
+            <p class="text-2xl font-bold">{{ quantidade_tentativas }}</p>
+            <p class="text-sm text-slate-600">Quizzes respondidos</p>
+        </article>
+        <article class="border border-slate-200 rounded-md p-4 text-center">
+            <p class="text-2xl font-bold">{{ quantidade_comentarios }}</p>
+            <p class="text-sm text-slate-600">Comentarios</p>
+        </article>
+    </div>
+</section>
+{% endblock %}

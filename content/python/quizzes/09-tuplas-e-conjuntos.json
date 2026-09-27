@@ -1,0 +1,10 @@
+{
+  "title": "Quiz - Tuplas e conjuntos",
+  "questions": [
+    {"question":"Qual sinal é usado normalmente para criar uma tupla?","options":["[]","()","<>","//"],"answer":1},
+    {"question":"Qual característica de uma tupla foi estudada?","options":["Pode receber append","Não deve ser alterada","Não guarda textos","Sempre tem um item"],"answer":1},
+    {"question":"Um conjunto mantém valores repetidos?","options":["Sim, todos","Não, elimina repetições","Só números","Só textos"],"answer":1},
+    {"question":"Por que não devemos depender da posição de um item em conjunto?","options":["A ordem não é uma referência garantida","Ele sempre está vazio","Só aceita listas","Não pode ser impresso"],"answer":0},
+    {"question":"Qual estrutura é adequada para meses fixos?","options":["Tupla","Arquivo","Função","Módulo"],"answer":0}
+  ]
+}

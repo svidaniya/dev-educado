@@ -1,0 +1,112 @@
+/* Tipografia do conteúdo Markdown das aulas. */
+.lesson-content {
+    color: #1e293b;
+    font-size: 1rem;
+    line-height: 1.75;
+}
+
+.lesson-content > *:first-child {
+    margin-top: 0;
+}
+
+.lesson-content > *:last-child {
+    margin-bottom: 0;
+}
+
+.lesson-content p {
+    margin: 1rem 0;
+}
+
+.lesson-content h2,
+.lesson-content h3 {
+    color: #0f172a;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.lesson-content h2 {
+    margin: 2.25rem 0 0.85rem;
+    font-size: 1.5rem;
+}
+
+.lesson-content h3 {
+    margin: 1.75rem 0 0.65rem;
+    font-size: 1.125rem;
+}
+
+.lesson-content ul,
+.lesson-content ol {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+}
+
+.lesson-content ul {
+    list-style: disc;
+}
+
+.lesson-content ol {
+    list-style: decimal;
+}
+
+.lesson-content li {
+    margin: 0.35rem 0;
+    padding-left: 0.25rem;
+}
+
+.lesson-content :not(pre) > code {
+    border-radius: 0.25rem;
+    background: #e2e8f0;
+    padding: 0.12rem 0.35rem;
+    color: #0f172a;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 0.9em;
+}
+
+.lesson-content pre {
+    overflow-x: auto;
+    margin: 1.25rem 0;
+    border: 1px solid #1e293b;
+    border-radius: 0.625rem;
+    background: #0f172a;
+    padding: 1rem 1.25rem;
+    color: #e2e8f0;
+    line-height: 1.6;
+}
+
+.lesson-content pre code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 0.9rem;
+}
+
+.lesson-content blockquote {
+    margin: 1.25rem 0;
+    border-left: 4px solid #38bdf8;
+    background: #f0f9ff;
+    padding: 0.75rem 1rem;
+    color: #334155;
+}
+
+.lesson-content a {
+    color: #1d4ed8;
+    font-weight: 500;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.lesson-content table {
+    width: 100%;
+    margin: 1.25rem 0;
+    border-collapse: collapse;
+}
+
+.lesson-content th,
+.lesson-content td {
+    border: 1px solid #cbd5e1;
+    padding: 0.65rem;
+    text-align: left;
+}
+
+.lesson-content th {
+    background: #f1f5f9;
+    font-weight: 700;
+}

@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% block title %}{{ aula.titulo }} - DevEducado{% endblock %}
+{% block content %}
+<section class="bg-white border border-slate-200 rounded-xl p-6 mb-6">
+    <h1 class="text-2xl font-bold mb-5">{{ aula.titulo }}</h1>
+
+    {% if not aula_concluida %}
+        <form method="post" action="{{ url_for('concluir_aula', identificador_curso=identificador_curso, identificador_aula=aula.identificador) }}" class="mb-5">
+            <button class="bg-emerald-600 text-white px-4 py-2 rounded-md">Marcar como concluida</button>
+        </form>
+    {% else %}
+        <p class="mb-5 inline-block text-sm bg-emerald-100 text-emerald-800 px-3 py-2 rounded-md">Aula concluida</p>
+    {% endif %}
+
+    <article class="lesson-content">{{ aula.conteudo|safe }}</article>
+
+    {% if proxima_atividade %}
+        <div class="mt-6">
+            {% if proxima_atividade.tipo == "aula" %}
+                <a href="{{ url_for('detalhe_aula', identificador_curso=identificador_curso, identificador_aula=proxima_atividade.identificador) }}" class="inline-block bg-slate-900 text-white px-4 py-2 rounded-md">Proxima atividade</a>
+            {% else %}
+                <a href="{{ url_for('pagina_quiz', identificador_curso=identificador_curso, identificador_quiz=proxima_atividade.identificador) }}" class="inline-block bg-slate-900 text-white px-4 py-2 rounded-md">Proxima atividade</a>
+            {% endif %}
+        </div>
+    {% endif %}
+</section>
+
+{% if aula.materiais %}
+<section class="bg-white border border-slate-200 rounded-xl p-6 mb-6">
+    <h2 class="text-xl font-bold mb-3">Materiais complementares</h2>
+    <ul class="list-disc ml-5 space-y-2">
+        {% for material in aula.materiais %}
+            <li><a class="text-blue-700 underline" href="{{ material.url }}" target="_blank" rel="noopener noreferrer">{{ material.rotulo }}</a></li>
+        {% endfor %}
+    </ul>
+</section>
+{% endif %}
+
+<section class="bg-white border border-slate-200 rounded-xl p-6">
+    <h2 class="text-xl font-bold mb-3">Comentarios</h2>
+    <form method="post" action="{{ url_for('adicionar_comentario', identificador_curso=identificador_curso, identificador_aula=aula.identificador) }}" class="mb-5">
+        <textarea name="conteudo" rows="3" required class="w-full border border-slate-300 rounded-md px-3 py-2" placeholder="Escreva seu comentario"></textarea>
+        <button class="mt-3 bg-slate-900 text-white px-4 py-2 rounded-md">Comentar</button>
+    </form>
+
+    <div class="space-y-3">
+        {% for comentario, usuario in comentarios %}
+            <article class="border border-slate-100 rounded-md p-3">
+                <div class="flex items-center justify-between gap-2">
+                    <p class="font-medium">{{ usuario.nome }}</p>
+                    <p class="text-xs text-slate-500">{{ comentario.data_criacao.strftime('%d/%m/%Y %H:%M') }}</p>
+                </div>
+                <p class="mt-2 text-slate-800">{{ comentario.conteudo }}</p>
+                {% if usuario_atual and usuario_atual.id == comentario.usuario_id %}
+                    <form method="post" action="{{ url_for('excluir_comentario', comentario_id=comentario.id) }}" class="mt-2">
+                        <button class="text-xs text-rose-700 underline">Apagar meu comentario</button>
+                    </form>
+                {% endif %}
+            </article>
+        {% else %}
+            <p class="text-slate-600">Seja o primeiro a comentar esta aula.</p>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

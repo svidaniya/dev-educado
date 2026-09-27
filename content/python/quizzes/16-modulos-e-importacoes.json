@@ -1,0 +1,10 @@
+{
+  "title": "Quiz - Módulos e importações",
+  "questions": [
+    {"question":"O que import math faz?","options":["Disponibiliza o módulo math","Cria arquivo math","Apaga cálculos","Repete um bloco"],"answer":0},
+    {"question":"Qual chamada calcula raiz quadrada?","options":["math.sqrt(9)","math.root(9)","sqrt.math(9)","int.sqrt(9)"],"answer":0},
+    {"question":"De qual módulo podemos importar randint?","options":["random","string","arquivo","input"],"answer":0},
+    {"question":"randint(1, 6) pode devolver:","options":["1 e 6, entre outros inteiros","Apenas 2","Um texto sempre","7"],"answer":0},
+    {"question":"A biblioteca padrão do Python:","options":["Já vem com Python","Exige framework web","Só tem listas","Não pode ser importada"],"answer":0}
+  ]
+}

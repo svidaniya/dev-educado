@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% block title %}Dashboard - DevEducado{% endblock %}
+{% block content %}
+<h1 class="text-2xl font-bold mb-4">Meu painel</h1>
+
+<section class="mb-8">
+    <h2 class="text-xl font-semibold mb-3">Cursos inscritos</h2>
+    {% if cursos_inscritos %}
+        <div class="space-y-4">
+            {% for curso_inscrito in cursos_inscritos %}
+                <article class="bg-white border border-slate-200 rounded-xl p-5">
+                    <div class="flex flex-wrap items-center justify-between gap-3">
+                        <div>
+                            <h3 class="font-bold text-lg">{{ curso_inscrito.curso.titulo }}</h3>
+                            <p class="text-sm text-slate-600">{{ curso_inscrito.progresso.quantidade_concluida }} de {{ curso_inscrito.progresso.total }} aulas concluidas</p>
+                        </div>
+                        <a href="{{ url_for('detalhe_curso', identificador_curso=curso_inscrito.curso.identificador) }}" class="bg-amber-400 px-3 py-2 rounded-md font-medium">Abrir curso</a>
+                    </div>
+                    <progress
+                        class="w-full h-3 mt-4 [&::-webkit-progress-bar]:rounded-full [&::-webkit-progress-bar]:bg-slate-200 [&::-webkit-progress-value]:rounded-full [&::-webkit-progress-value]:bg-emerald-500"
+                        value="{{ curso_inscrito.progresso.porcentagem }}"
+                        max="100"
+                    ></progress>
+                </article>
+            {% endfor %}
+        </div>
+    {% else %}
+        <p class="text-slate-700">Voce ainda nao esta inscrito em nenhum curso.</p>
+    {% endif %}
+</section>
+
+<section>
+    <h2 class="text-xl font-semibold mb-3">Resultados recentes de quizzes</h2>
+    <div class="bg-white border border-slate-200 rounded-xl overflow-hidden">
+        <table class="w-full text-sm">
+            <thead class="bg-slate-50">
+                <tr>
+                    <th class="text-left px-4 py-2">Curso</th>
+                    <th class="text-left px-4 py-2">Quiz</th>
+                    <th class="text-left px-4 py-2">Pontuacao</th>
+                    <th class="text-left px-4 py-2">Data</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for tentativa in tentativas_recentes %}
+                    <tr class="border-t border-slate-100">
+                        <td class="px-4 py-2">{{ tentativa.identificador_curso|title }}</td>
+                        <td class="px-4 py-2">{{ tentativa.identificador_quiz }}</td>
+                        <td class="px-4 py-2">{{ tentativa.pontuacao }}/{{ tentativa.total }}</td>
+                        <td class="px-4 py-2">{{ tentativa.data_criacao.strftime('%d/%m/%Y %H:%M') }}</td>
+                    </tr>
+                {% else %}
+                    <tr>
+                        <td colspan="4" class="px-4 py-4 text-slate-600">Nenhum quiz respondido ainda.</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</section>
+{% endblock %}

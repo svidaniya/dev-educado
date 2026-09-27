@@ -1,0 +1,10 @@
+{
+  "title": "Quiz - Entrada e saída",
+  "questions": [
+    {"question":"Qual função recebe texto digitado pela pessoa?","options":["print","input","int","range"],"answer":1},
+    {"question":"O que input devolve inicialmente?","options":["Sempre um inteiro","Sempre um texto","Sempre uma lista","Nada"],"answer":1},
+    {"question":"Para converter \"25\" em inteiro, usamos:","options":["str(\"25\")","int(\"25\")","print(\"25\")","input(\"25\")"],"answer":1},
+    {"question":"Em print(\"Olá,\", nome), o que aparece depois da saudação?","options":["O valor de nome","A palavra input","Um número obrigatório","Nada"],"answer":0},
+    {"question":"Por que converter uma idade recebida por input?","options":["Para poder fazer cálculos","Para apagar a resposta","Para criar um comentário","Para mudar o teclado"],"answer":0}
+  ]
+}

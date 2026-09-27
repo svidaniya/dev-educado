@@ -1,0 +1,10 @@
+{
+  "title": "Quiz - Arquivos",
+  "questions": [
+    {"question":"Qual modo abre um arquivo para escrita substituindo conteúdo?","options":["w","r","a","x"],"answer":0},
+    {"question":"Qual modo acrescenta conteúdo sem apagar o anterior?","options":["a","w","r","int"],"answer":0},
+    {"question":"Qual modo abre um arquivo para leitura?","options":["r","w","a","for"],"answer":0},
+    {"question":"Por que usar with open(...)?","options":["Para fechar o arquivo automaticamente","Para criar um loop","Para converter número","Para importar módulo"],"answer":0},
+    {"question":"Que erro pode ocorrer ao ler um arquivo inexistente?","options":["FileNotFoundError","ValueError","ZeroError","ListError"],"answer":0}
+  ]
+}

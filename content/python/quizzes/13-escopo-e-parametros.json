@@ -1,0 +1,10 @@
+{
+  "title": "Quiz - Parâmetros e escopo",
+  "questions": [
+    {"question":"O que é um parâmetro?","options":["Um valor que a função recebe","Um tipo de arquivo","Uma lista vazia","Um comentário"],"answer":0},
+    {"question":"Em def soma(a, b), quais são os parâmetros?","options":["soma","a e b","def","return"],"answer":1},
+    {"question":"Uma variável criada dentro de função normalmente é:","options":["Local à função","Global obrigatoriamente","Um arquivo","Uma tupla"],"answer":0},
+    {"question":"O que calcular(3, 4) faz em uma função com dois parâmetros?","options":["Envia dois argumentos","Cria dois módulos","Apaga os parâmetros","Repete quatro vezes"],"answer":0},
+    {"question":"Por que usar return em vez de depender de variável externa?","options":["Deixa o resultado explícito","Impede cálculos","Remove parâmetros","Cria erro"],"answer":0}
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "title": "Quiz - Repetição com for",
+  "questions": [
+    {"question":"Quando for é especialmente útil?","options":["Quando queremos percorrer itens ou repetir um número conhecido de vezes","Para tratar erros","Para abrir arquivos","Para criar dicionários"],"answer":0},
+    {"question":"range(1, 4) produz quais números?","options":["1, 2, 3","1, 2, 3, 4","0, 1, 2, 3","2, 3, 4"],"answer":0},
+    {"question":"No for letra in \"sol\", letra recebe:","options":["A palavra inteira sempre","Cada caractere do texto","Um número aleatório","Uma lista"],"answer":1},
+    {"question":"O limite final de range(1, 6) é:","options":["Incluído","Excluído","Sempre zero","Um texto"],"answer":1},
+    {"question":"Qual saída é esperada para for n in range(2): print(n)?","options":["0 e 1","1 e 2","2 apenas","Erro"],"answer":0}
+  ]
+}
