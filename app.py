@@ -17,7 +17,7 @@ DIRETORIO_CONTEUDO = DIRETORIO_BASE / "content"
 
 app = Flask(__name__)
 app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY", "deveducado-chave-local")
-app.config["SQLALCHEMY_DATABASE_URI"] = f"sqlite:///{DIRETORIO_BASE / 'instance' / 'database.db'}"
+app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:////tmp/database.db"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 db = SQLAlchemy(app)
 
